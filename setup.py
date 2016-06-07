@@ -30,7 +30,7 @@ setup(
 
     # Packages
     packages = find_packages(),
-    data_files=['cards', ["MCNPmanager/cards/alltogetherold.part",
+    data_files=['MCNPmanager/cards', ["MCNPmanager/cards/alltogetherold.part",
                                 "MCNPmanager/cards/alltogether.part",
                                 "MCNPmanager/cards/cells.part",
                                 "MCNPmanager/cards/materials.part",
