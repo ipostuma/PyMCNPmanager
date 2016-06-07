@@ -1,0 +1,38 @@
+#!python
+
+import sys, argparse, string
+from os import path, makedirs, getcwd
+from MCNPmanager import MCNPmanager
+
+def initManager(args):
+    MCNPmanager.initCreateDir(path.join(getcwd(),path.basename(args.PATH[0])))
+    print "\n\033[1;34mMCNPmanager generated the project\033[1;32m %s\033[0m\n" % (path.basename(args.PATH[0]))
+
+def buildManager(args):
+    print args
+
+def main():
+    """
+    MCNP file project Manager:\n
+    This program aims to help developing and managing an MCNP simulation
+    """
+    parser = argparse.ArgumentParser(description=main.__doc__,
+             epilog="Homepage: website to be defined")
+    subparsers = parser.add_subparsers(title='subcommands',
+                                        description='valid subcommands',
+                                        help='additional help')
+
+    parser_init = subparsers.add_parser('init' ,help='MCNP project directory initialization')
+    parser_init.add_argument('PATH', type=str, help='Name of the MCNP project you want to create',nargs=1)
+    parser_init.set_defaults(func=initManager)
+
+    parser_build = subparsers.add_parser('build' , help='MCNPmanager build')
+    #parser_build.add_argument('', type=str, help='Build MCNP input file',nargs=1)
+    parser_build.add_argument('-d', type=str, help='Give the PATH of the MCNPmanager was initialized',nargs=1)
+    parser_build.set_defaults(func=buildManager)
+
+    arguments = parser.parse_args()
+    arguments.func(arguments)
+
+if __name__ == "__main__":
+    sys.exit(main())
