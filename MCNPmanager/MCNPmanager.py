@@ -16,7 +16,7 @@ def initCreateDir(directory):
                 path.join(this_dir,"cards/tallies.part"),
                 path.join(this_dir,"cards/traslations.part")]
     for card in cards:
-        copyfile(card, path.join(directory, "cards/",,path.basename(directory)))
+        copyfile(card, path.join(directory, "cards/",path.basename(directory)))
     geom=[  path.join(this_dir,"geom/cells.part"),
             path.join(this_dir,"geom/surfaces.part")]
     for g in geom:
