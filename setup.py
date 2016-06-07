@@ -30,15 +30,15 @@ setup(
 
     # Packages
     packages = find_packages(),
-    data_files=['MCNPmanager/cards', ["MCNPmanager/cards/alltogetherold.part",
-                                "MCNPmanager/cards/alltogether.part",
-                                "MCNPmanager/cards/cells.part",
-                                "MCNPmanager/cards/materials.part",
-                                "MCNPmanager/cards/parameters.part",
-                                "MCNPmanager/cards/source.part",
-                                "MCNPmanager/cards/surfaces.part",
-                                "MCNPmanager/cards/tallies.part",
-                                "MCNPmanager/cards/traslations.part"]],
+    # data_files=['MCNPmanager/cards', ["MCNPmanager/cards/alltogetherold.part",
+    #                             "MCNPmanager/cards/alltogether.part",
+    #                             "MCNPmanager/cards/cells.part",
+    #                             "MCNPmanager/cards/materials.part",
+    #                             "MCNPmanager/cards/parameters.part",
+    #                             "MCNPmanager/cards/source.part",
+    #                             "MCNPmanager/cards/surfaces.part",
+    #                             "MCNPmanager/cards/tallies.part",
+    #                             "MCNPmanager/cards/traslations.part"]],
     # Include additional files into the package
     include_package_data=True,
 
