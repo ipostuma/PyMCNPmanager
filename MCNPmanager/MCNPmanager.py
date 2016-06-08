@@ -37,7 +37,7 @@ def cpMCNPproject(directory):
     wkdir=getcwd()
     if checkifMCNPproject(directory,1)==1:
         return 1
-    if checkifMCNPproject(wkdir,2)==2:
+    elif checkifMCNPproject(wkdir,2)==2:
         return 2
     else:
         cards = [   path.join(directory,"cards/parameters.part"),
@@ -60,6 +60,7 @@ def cpMCNPproject(directory):
                 print "\n\033[1;34mMCNPmanager cp error:\033[1;32m %s \033[0m\n" % (e)
         return 0
 
+#Check if a directory contains an MCNPmanager project
 def checkifMCNPproject(directory,r):
     if not path.exists(path.join(directory, "cards")):
         print "\n\033[1;34mMCNPmanager cp error:\033[1;32m %s contains no MCNPmanager project\033[0m\n" % (directory)
