@@ -14,6 +14,7 @@ def cpManager(args):
         print "\n\033[1;34mMCNPmanager cp worked correctly: \033[1;32m %s -> %s \033[0m\n" % (path.abspath(args.PATH[0]),getcwd())
 
 def buildManager(args):
+    print args
     r=0
     filename="mcnp.inp"
     if args.f is not None:
