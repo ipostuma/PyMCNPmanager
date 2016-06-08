@@ -19,9 +19,9 @@ def buildManager(args):
     if args.f is not None:
         filename=args.f[0]
     if args.d is not None:
-        r,filename=buildMCNPproject(args.d[0],outputfile=filename)
+        r,filename=MCNPmanager.buildMCNPproject(args.d[0],outputfile=filename)
     else:
-        r,filemane=buildMCNPproject(outputfile=filename)
+        r,filemane=MCNPmanager.buildMCNPproject(outputfile=filename)
     if r==0:
         print "\n\033[1;34mMCNPmanager build successful: \033[1;32m %s created \033[0m\n" % (filename)
 
