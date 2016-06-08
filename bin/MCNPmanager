@@ -8,12 +8,12 @@ def initManager(args):
     MCNPmanager.initCreateDir(path.join(getcwd(),path.basename(args.PATH[0])))
     print "\n\033[1;34mMCNPmanager generated the project\033[1;32m %s\033[0m\n" % (path.basename(args.PATH[0]))
 
+def cpManager(args):
+    cpMCNPproject(path.abspath(args.PATH[0]))
+    print "\n\033[1;34mMCNPmanager cp worked correctly: \033[1;32m %s -> %s \033[0m\n" % (path.abspath(args.PATH[0]),getcwd())
+
 def buildManager(args):
     print args
-
-def cpManager(args):
-    abspath=path.abspath(args.PATH[0])
-    print abspath
 
 def main():
     """
