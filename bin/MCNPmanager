@@ -16,7 +16,7 @@ def cpManager(args):
 def buildManager(args):
     r=0
     filename
-    if args.p not None:
+    if args.p is not None:
         r,filename=buildMCNPproject(args.p[0])
     else:
         r,filemane=buildMCNPproject()
