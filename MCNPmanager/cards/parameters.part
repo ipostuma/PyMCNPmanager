@@ -1,11 +1,9 @@
-c -------------------
+c -----------------------------------------------------------------------------
 c Other Param
-c -------------------
+c -----------------------------------------------------------------------------
  mode  n p              $ coupled neutron-photon transport
  prdmp j j 1
-c prdmp   j 5000000 j 2 j
-c phys:h 10000
- phys:n  20 20   $ neutron energy cutoff (analog Monte Carlo model)
-c print   10 20 40 50 60 70 72 98 100 110 126 130 140 160 170
- dbcn 55555
- nps     4e+6
+ phys:n  20 20          $ neutron energy cutoff
+ print   10 20 40 50 60 70 72 98 100 110 126 130 140 160 170
+ dbcn 55555             $ initial seed
+ nps  1e+3              $ number of particles
