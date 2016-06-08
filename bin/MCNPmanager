@@ -37,7 +37,7 @@ def main():
 
     parser_build = subparsers.add_parser('build' , help='MCNPmanager build')
     #parser_build.add_argument('', type=str, help='Build MCNP input file',nargs=1)
-    parser_build.add_argument('-d', type=str, help='Give the PATH of the MCNPmanager was initialized',nargs=1)
+    parser_build.add_argument('-d', type=str, help='Give the PATH of the MCNPmanager project',nargs=1)
     parser_build.set_defaults(func=buildManager)
 
     arguments = parser.parse_args()
