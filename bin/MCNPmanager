@@ -15,11 +15,13 @@ def cpManager(args):
 
 def buildManager(args):
     r=0
-    filename
+    filename="mcnp.inp"
+    if args.f is not None:
+        filename=args.f[0]
     if args.p is not None:
-        r,filename=buildMCNPproject(args.p[0])
+        r,filename=buildMCNPproject(args.p[0],outputfile=filename)
     else:
-        r,filemane=buildMCNPproject()
+        r,filemane=buildMCNPproject(outputfile=filename)
     if r==0:
         print "\n\033[1;34mMCNPmanager build successful: \033[1;32m %s created \033[0m\n" % (filename)
 
@@ -45,6 +47,7 @@ def main():
     parser_build = subparsers.add_parser('build' , help='MCNPmanager build')
     #parser_build.add_argument('', type=str, help='Build MCNP input file',nargs=1)
     parser_build.add_argument('-d', type=str, help='Give the PATH of the MCNPmanager project',nargs=1)
+    parser_build.add_argument('-f', type=str, help='Give the FILENAME of the output',nargs=1)
     parser_build.set_defaults(func=buildManager)
 
     arguments = parser.parse_args()

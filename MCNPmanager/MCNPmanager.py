@@ -60,7 +60,7 @@ def cpMCNPproject(directory):
                 print "\n\033[1;34mMCNPmanager cp error:\033[1;32m %s \033[0m\n" % (e)
         return 0
 
-def buildMCNPproject(directory=getcwd()):
+def buildMCNPproject(directory=getcwd(),outputfile = "mcnp.inp"):
     if checkifMCNPproject(directory,1)==1:
         return 1,"no file"
     cards = [   path.join(directory,"cards/parameters.part"),
@@ -78,7 +78,6 @@ def buildMCNPproject(directory=getcwd()):
                 path.join(directory,"geom/surfaces.part"),
                 path.join(directory,"cards/alltogether.part")]
     title = "MCNPmanager project input file"
-    outputfile = "mcnp.inp"
     f = open("lessphotons12.inp", "w")
     f.write(title+" -> "+outputfile)
     for g in geom:
