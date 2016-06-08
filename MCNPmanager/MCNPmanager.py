@@ -55,3 +55,4 @@ def cpMCNPproject(directory):
                 copyfile(g, path.join(wkdir, "geom/",path.basename(g)))
             except Exception as e:
                 print "\n\033[1;34mMCNPmanager cp error:\033[1;32m %s \033[0m\n" % (e)
+        return 0
