@@ -78,7 +78,7 @@ def buildMCNPproject(directory=getcwd(),outputfile = "mcnp.inp"):
                 path.join(directory,"geom/surfaces.part"),
                 path.join(directory,"cards/alltogether.part")]
     title = "MCNPmanager project input file"
-    f = open("lessphotons12.inp", "w")
+    f = open(outputfile, "w")
     f.write(title+" -> "+outputfile)
     for g in geom:
         cf = open(g,'r')
@@ -90,8 +90,8 @@ def buildMCNPproject(directory=getcwd(),outputfile = "mcnp.inp"):
 #Check if a directory contains an MCNPmanager project
 def checkifMCNPproject(directory,r):
     if not path.exists(path.join(directory, "cards")):
-        print "\n\033[1;34mMCNPmanager cp error:\033[1;32m %s contains no MCNPmanager project\033[0m\n" % (directory)
+        print "\n\033[1;34mMCNPmanager error:\033[1;32m %s contains no MCNPmanager project\033[0m\n" % (directory)
         return r
     elif not path.exists(path.join(directory, "geom")):
-        print "\n\033[1;34mMCNPmanager cp error:\033[1;32m %s contains no MCNPmanager project\033[0m\n" % (directory)
+        print "\n\033[1;34mMCNPmanager error:\033[1;32m %s contains no MCNPmanager project\033[0m\n" % (directory)
         return r
