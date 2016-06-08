@@ -22,7 +22,8 @@ setup(
     name="MCNPmanager",
 
     # Version number (initial):
-    version="0.1.0",
+    version="0.1.1",
+    license = "GNU GPL v3",
 
     # Application author details:
     author="Ian Postuma",
@@ -44,7 +45,7 @@ setup(
 
     # Details
     # url="http://pypi.python.org/pypi/MyApplication_v010/",
-    url="http://ianpostuma.com",
+    url="https://github.com/ipostuma/PyMCNPmanager",
 
     #
     # license="LICENSE.txt",
