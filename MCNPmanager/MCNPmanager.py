@@ -60,6 +60,34 @@ def cpMCNPproject(directory):
                 print "\n\033[1;34mMCNPmanager cp error:\033[1;32m %s \033[0m\n" % (e)
         return 0
 
+def buildMCNPproject(directory=getcwd()):
+    if checkifMCNPproject(directory,1)==1:
+        return 1,"no file"
+    cards = [   path.join(directory,"cards/parameters.part"),
+                path.join(directory,"cards/materials.part"),
+                path.join(directory,"cards/source.part"),
+                path.join(directory,"cards/tallies.part"),
+                path.join(directory,"cards/traslations.part")]
+    f = open( path.join(directory,"cards/alltogether.part"),"w")
+    for card in cards:
+        cf = open(card,"r")
+        f.write(cf.read())
+        cf.close()
+    f.close()
+    geom  = [   path.join(directory,"geom/cells.part"),
+                path.join(directory,"geom/surfaces.part"),
+                path.join(directory,"cards/alltogether.part")]
+    title = "MCNPmanager project input file"
+    outputfile = "mcnp.inp"
+    f = open("lessphotons12.inp", "w")
+    f.write(title+" -> "+outputfile)
+    for g in geom:
+        cf = open(g,'r')
+        f.write("\r\n"+cf.read())
+        cf.close()
+    f.close()
+    return 0,outputfile
+
 #Check if a directory contains an MCNPmanager project
 def checkifMCNPproject(directory,r):
     if not path.exists(path.join(directory, "cards")):
