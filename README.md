@@ -26,7 +26,7 @@ pip install git+https://github.com/ipostuma/PyMCNPmanager.git
 ```
 
 While if you want to get the latest *development* **unstable** repo, just execute
-the command above and ad this trailing string ```@dev``` .
+the command above and add this trailing string ```@dev``` .
 
 ######to uninstall:
 
@@ -42,4 +42,4 @@ List of authors: Ian Postuma
 
 License
 -------
-[I'm an inline-style link](https://github.com/ipostuma/PyMCNPmanager/blob/master/LICENSE)
+[GNU GPL v3](https://github.com/ipostuma/PyMCNPmanager/blob/master/LICENSE)
