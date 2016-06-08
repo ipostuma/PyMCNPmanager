@@ -11,6 +11,10 @@ def initManager(args):
 def buildManager(args):
     print args
 
+def cpManager(args):
+    abspath=path.abspath(args.PATH[0])
+    print abspath
+
 def main():
     """
     MCNP file project Manager:\n
@@ -25,6 +29,10 @@ def main():
     parser_init = subparsers.add_parser('init' ,help='MCNP project directory initialization')
     parser_init.add_argument('PATH', type=str, help='Name of the MCNP project you want to create',nargs=1)
     parser_init.set_defaults(func=initManager)
+
+    parser_init = subparsers.add_parser('cp' ,help='Copy geom and cards from an existing project')
+    parser_init.add_argument('PATH', type=str, help='Give the path to the project you want to copy',nargs=1)
+    parser_init.set_defaults(func=cpManager)
 
     parser_build = subparsers.add_parser('build' , help='MCNPmanager build')
     #parser_build.add_argument('', type=str, help='Build MCNP input file',nargs=1)
