@@ -7,9 +7,9 @@ parameter will *help* and guide you through the usage of the script.
 ### version 0.1.1
 it is still a development version, but these commands work:
 
-+ MCNPmanager init PATH #start a new MCNPmanager project
-+ MCNPmanager cd PATH #copy an MCNPmanager project into an existing one
-+ MCNPmanager build # build the MCNP input file
++ ```MCNPmanager init PATH``` -> start a new MCNPmanager project
++ ```MCNPmanager cd PATH``` -> copy an MCNPmanager project into an existing one
++ ```MCNPmanager build``` -> build the MCNP input file
 
 Requirements
 ------------
