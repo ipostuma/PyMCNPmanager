@@ -28,7 +28,7 @@ pip install git+https://github.com/ipostuma/PyMCNPmanager.git
 While if you want to get the latest *development* **unstable** repo, just execute
 the command above and add this trailing string ```@dev``` .
 
-######to uninstall:
+###### to uninstall:
 
 ```
 pip uninstall PyMCNPmanager
