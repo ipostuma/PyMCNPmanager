@@ -6,12 +6,12 @@ from MCNPmanager import MCNPmanager
 
 def initManager(args):
     MCNPmanager.initCreateDir(path.join(getcwd(),path.basename(args.PATH[0])))
-    print "\n\033[1;34mMCNPmanager generated the project\033[1;32m %s\033[0m\n" % (path.basename(args.PATH[0]))
+    print("\n\033[1;34mMCNPmanager generated the project\033[1;32m %s\033[0m\n" % (path.basename(args.PATH[0])))
 
 def cpManager(args):
     r=MCNPmanager.cpMCNPproject(path.abspath(args.PATH[0]))
     if r==0:
-        print "\n\033[1;34mMCNPmanager cp worked correctly: \033[1;32m %s -> %s \033[0m\n" % (path.abspath(args.PATH[0]),getcwd())
+        print("\n\033[1;34mMCNPmanager cp worked correctly: \033[1;32m %s -> %s \033[0m\n" % (path.abspath(args.PATH[0]),getcwd()))
 
 def buildManager(args):
     r=0
@@ -23,7 +23,7 @@ def buildManager(args):
     else:
         r,filemane=MCNPmanager.buildMCNPproject(outputfile=filename)
     if r==0:
-        print "\n\033[1;34mMCNPmanager build successful: \033[1;32m %s created \033[0m\n" % (filename)
+        print("\n\033[1;34mMCNPmanager build successful: \033[1;32m %s created \033[0m\n" % (filename))
 
 def main():
     """
