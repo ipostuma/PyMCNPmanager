@@ -51,13 +51,13 @@ def cpMCNPproject(directory):
             try:
                 copyfile(card, path.join(wkdir, "cards/",path.basename(card)))
             except Exception as e:
-                print "\n\033[1;34mMCNPmanager cp error:\033[1;32m %s \033[0m\n" % (e)
+                print("\n\033[1;34mMCNPmanager cp error:\033[1;32m %s \033[0m\n" % (e))
 
         for g in geom:
             try:
                 copyfile(g, path.join(wkdir, "geom/",path.basename(g)))
             except Exception as e:
-                print "\n\033[1;34mMCNPmanager cp error:\033[1;32m %s \033[0m\n" % (e)
+                print("\n\033[1;34mMCNPmanager cp error:\033[1;32m %s \033[0m\n" % (e))
         return 0
 
 def buildMCNPproject(directory=getcwd(),outputfile = "mcnp.inp"):
@@ -90,8 +90,8 @@ def buildMCNPproject(directory=getcwd(),outputfile = "mcnp.inp"):
 #Check if a directory contains an MCNPmanager project
 def checkifMCNPproject(directory,r):
     if not path.exists(path.join(directory, "cards")):
-        print "\n\033[1;34mMCNPmanager error:\033[1;32m %s contains no MCNPmanager project\033[0m\n" % (directory)
+        print("\n\033[1;34mMCNPmanager error:\033[1;32m %s contains no MCNPmanager project\033[0m\n" % (directory))
         return r
     elif not path.exists(path.join(directory, "geom")):
-        print "\n\033[1;34mMCNPmanager error:\033[1;32m %s contains no MCNPmanager project\033[0m\n" % (directory)
+        print("\n\033[1;34mMCNPmanager error:\033[1;32m %s contains no MCNPmanager project\033[0m\n" % (directory))
         return r
